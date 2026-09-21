@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books – JAL Book Club</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Site header with navigation -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="nav__brand">📚 JAL Book Club</a>
+        <div class="nav__links">
+          <a href="books.html" class="nav__link nav__link--active">Books</a>
+          <a href="members.html" class="nav__link">Members</a>
+        </div>
+        <div class="nav__actions">
+          <button id="logout-btn" type="button" class="btn btn--danger">Sign out</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero section - "The Inner Shelf" -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <span class="hero__eyebrow">MEMBERS AREA</span>
+          <h1 class="hero__title">The Inner Shelf</h1>
+          <p class="hero__description">
+            Welcome back, <span id="welcome-username"></span>. The candle is lit.
+          </p>
+        </div>
+
+        <!-- Stats sidebar -->
+        <div class="hero__sidebar">
+          <div class="stats">
+            <div class="stat">
+              <span class="stat__value" id="stat-books">–</span>
+              <span class="stat__label">Books in shelf</span>
+            </div>
+            <div class="stat">
+              <span class="stat__value" id="stat-members">–</span>
+              <span class="stat__label">Members</span>
+            </div>
+            <div class="stat">
+              <span class="stat__value" id="stat-reviews">–</span>
+              <span class="stat__label">Reviews posted</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bookshelf section -->
+    <section class="shelf">
+      <div class="container">
+
+        <!-- Tabs: Book Shelf / Add Book / Members -->
+        <div class="shelf-tabs">
+          <a href="books.html" class="shelf-tabs__item shelf-tabs__item--active">📚 Book Shelf</a>
+          <a href="add-book.html" class="shelf-tabs__item">+ Add Book</a>
+          <a href="members.html" class="shelf-tabs__item">👀 Members</a>
+        </div>
+
+        <div class="shelf__header">
+          <div>
+            <p class="shelf__eyebrow">All Books</p>
+            <h2 class="shelf__title">Book Shelf</h2>
+          </div>
+          <p class="shelf__count" id="shelf-count">0 books found</p>
+        </div>
+
+        <!-- Search and genre filters -->
+        <div class="shelf__controls">
+          <div class="form-group">
+            <input class="form-input" type="text" id="book-search" placeholder="Search by title or author...">
+          </div>
+          <div class="tag-list" id="genre-filters"></div>
+        </div>
+
+        <!-- Book grid - filled by books.js -->
+        <div class="books-table__controls">
+          <div class="form-group">
+            <label class="form-label" for="book-sort">Sort by</label>
+
+            <select id="book-sort" class="form-select">
+              <option value="title">Title A–Z</option>
+              <option value="rating">Highest rated</option>
+              <option value="year-newest">Newest published</option>
+              <option value="year-oldest">Oldest published</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="books-table-wrapper">
+          <table class="books-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genres</th>
+                <th>Published year</th>
+                <th>Rating</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+
+            <tbody id="book-list"></tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/functions.js"></script>
+  <script src="js/member-books.js"></script>
+
+</body>
+
+</html>

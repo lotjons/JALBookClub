@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the Club – JAL Book Club</title>
+  <!-- Alex's design system - imports all CSS automatically via style.css -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Site header with navigation - reuses .site-header and .nav from navigation.css -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+
+        <!-- Brand/logo - links back to login page -->
+        <a href="index.html" class="nav__brand">📚 JAL Book Club</a>
+
+        <!-- Navigation links -->
+        <div class="nav__links">
+          <a href="books.html" class="nav__link">Books</a>
+          <!-- Sign In is not active on this page, so no nav__link--active -->
+          <a href="login.html" class="nav__link">Sign In</a>
+        </div>
+
+        <!-- Join button highlighted since we are on the register page -->
+        <div class="nav__actions">
+          <a href="register.html" class="btn btn--primary nav__link--active">Join the Club</a>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content area -->
+  <main>
+    <div class="container">
+
+      <!-- auth-card is a page-specific class defined in auth.css -->
+      <!-- It centers the form and gives it a dark card appearance -->
+      <div class="auth-card">
+
+        <!-- Logo and heading centered at the top of the card -->
+        <div class="auth-card__header">
+          <span class="auth-card__logo">📚</span>
+          <!-- auth-card__brand uses Fraunces font and gold color -->
+          <p class="auth-card__brand">JAL Book Club</p>
+          <!-- auth-card__title uses display font for literary feel -->
+          <h1 class="auth-card__title">Join the club.</h1>
+          <!-- auth-card__subtitle is muted text below the heading -->
+          <p class="auth-card__subtitle">Claim your shelf.</p>
+        </div>
+
+        <!-- Shows error or success message after form submission -->
+        <!-- form-error gives red color from forms.css -->
+        <p id="register-message" class="form-error"></p>
+
+        <!-- Register form - .form gives grid layout with spacing between fields -->
+        <form class="form" id="register-form">
+
+          <!-- form-group groups label and input together -->
+          <div class="form-group">
+            <!-- for="username" links label to input for accessibility (a11y) -->
+            <label class="form-label" for="username">Username</label>
+            <!-- form-input gives dark background and gold border on hover/focus -->
+            <input class="form-input" type="text" id="username" placeholder="your_username">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <!-- type="password" automatically hides the text with dots -->
+            <input class="form-input" type="password" id="password" placeholder="••••••••">
+          </div>
+
+          <!-- btn--primary gives gold background - type="button" prevents page reload -->
+          <!-- register.js listens for clicks on this button -->
+          <button id="register-btn" type="button" class="btn btn--primary">Join the Club</button>
+
+        </form>
+
+        <!-- Link back to login for users who already have an account -->
+        <p class="auth-card__footer-text">
+          Already a member? <a href="login.html">Sign in →</a>
+        </p>
+
+      </div>
+
+      <!-- Small note at the bottom of the page - uses mono font from typography.css -->
+      <p class="auth-footer">✦ Members-only access to the inner shelf</p>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <p class="site-footer__brand">JAL Book Club</p>
+
+        <p class="site-footer__meta">
+          Built with books, code and questionable reading habits.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <a href="index.html">Books</a>
+        <a href="login.html">Sign In</a>
+        <a href="register.html">Join the Club</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- functions.js defines API_URL used by register.js -->
+  <script src="js/functions.js"></script>
+  <!-- register.js handles all registration logic -->
+  <script src="js/register.js"></script>
+
+</body>
+
+</html>

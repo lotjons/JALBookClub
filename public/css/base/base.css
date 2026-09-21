@@ -1,0 +1,57 @@
+html {
+	background-color: var(--color-bg);
+}
+
+body {
+	min-width: 320px;
+	background-color: var(--color-bg);
+	color: var(--color-text);
+	font-family: var(--font-body);
+	line-height: 1.6;
+	text-rendering: optimizeLegibility;
+}
+
+main {
+	width: 100%;
+}
+
+a {
+	transition: color 150ms ease;
+}
+
+a:hover {
+	color: var(--color-primary);
+}
+
+button,
+input,
+textarea,
+select {
+	color: inherit;
+}
+
+button {
+	border: 0;
+}
+
+::selection {
+	background-color: var(--color-primary);
+	color: var(--color-primary-text);
+}
+
+:focus-visible {
+	outline: 2px solid var(--color-primary);
+	outline-offset: 3px;
+}
+
+.container {
+	width: min(
+		calc(100% - 2rem),
+		var(--container-width)
+	);
+	margin-inline: auto;
+}
+
+.hidden {
+	display: none;
+}

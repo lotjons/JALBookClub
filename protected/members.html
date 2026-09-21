@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Members – JAL Book Club</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Site header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+
+        <a href="index.html" class="nav__brand">
+          📚 JAL Book Club
+        </a>
+
+        <div class="nav__links">
+          <a href="books.html" class="nav__link">
+            Books
+          </a>
+
+          <a href="members.html" class="nav__link nav__link--active">
+            Members
+          </a>
+        </div>
+
+        <div class="nav__actions">
+          <button id="logout-btn" type="button" class="btn btn--danger">
+            Sign out
+          </button>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Members area hero -->
+    <section class="hero">
+      <div class="container">
+
+        <div class="hero__content">
+          <span class="hero__eyebrow">
+            MEMBERS AREA
+          </span>
+
+          <h1 class="hero__title">
+            The Inner Shelf
+          </h1>
+
+          <p class="hero__description">
+            Meet the questionable people behind the reading habits.
+          </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero__sidebar">
+          <div class="stats">
+
+            <div class="stat">
+              <span class="stat__value" id="stat-books">
+                –
+              </span>
+
+              <span class="stat__label">
+                Books in shelf
+              </span>
+            </div>
+
+            <div class="stat">
+              <span class="stat__value" id="stat-members">
+                –
+              </span>
+
+              <span class="stat__label">
+                Members
+              </span>
+            </div>
+
+            <div class="stat">
+              <span class="stat__value" id="stat-reviews">
+                –
+              </span>
+
+              <span class="stat__label">
+                Reviews posted
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Members section -->
+    <section class="shelf">
+      <div class="container">
+
+        <!-- Members area navigation -->
+        <div class="shelf-tabs">
+
+          <a href="books.html" class="shelf-tabs__item">
+            📚 Book Shelf
+          </a>
+
+          <a href="add-book.html" class="shelf-tabs__item">
+            + Add Book
+          </a>
+
+          <a href="members.html" class="shelf-tabs__item shelf-tabs__item--active">
+            👀 Members
+          </a>
+
+        </div>
+
+        <!-- Section heading -->
+        <div class="shelf__header">
+
+          <div>
+            <p class="shelf__eyebrow">
+              Club Members
+            </p>
+
+            <h2 class="shelf__title">
+              Meet the Club
+            </h2>
+          </div>
+
+          <p class="shelf__count" id="member-count">
+            0 members
+          </p>
+
+        </div>
+
+        <!-- Members rendered by members.js -->
+        <div class="member-grid" id="member-list"></div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+
+      <div>
+        <p class="site-footer__brand">
+          JAL Book Club
+        </p>
+
+        <p class="site-footer__meta">
+          Built with books, code and questionable reading habits.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <a href="index.html">Books</a>
+        <a href="members.html">Members</a>
+      </nav>
+
+    </div>
+  </footer>
+
+  <script src="js/functions.js"></script>
+  <script src="js/members.js"></script>
+
+</body>
+
+</html>

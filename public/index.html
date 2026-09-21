@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>JAL Book Club</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER / NAVIGATION
+       ========================= -->
+
+  <header class="site-header">
+
+    <div class="container nav">
+
+      <a class="nav__brand" href="index.html">
+        📚 JAL Book Club
+      </a>
+
+      <nav class="nav__links" id="nav-links" aria-label="Main navigation">
+
+        <a class="nav__link nav__link--active" href="index.html">
+          Books
+        </a>
+
+        <a class="nav__link" href="login.html">
+          Sign In
+        </a>
+
+      </nav>
+
+      <div class="nav__actions" id="nav-actions">
+
+        <a class="btn btn--primary" href="register.html">
+          Join the Club
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         HERO
+         ========================= -->
+
+    <section class="hero">
+
+      <div class="container">
+
+        <!-- Hero text -->
+
+        <div class="hero__content">
+
+          <p class="hero__eyebrow">
+            ✦ EST. 2024 · MEMBERS ONLY
+          </p>
+
+          <h1 class="hero__title">
+            A club for people who read
+            <span>too much.</span>
+          </h1>
+
+          <p class="hero__description">
+            JAL Book Club is a curated reading community for obsessive
+            readers. We argue about books, share dog-eared pages,
+            and occasionally sleep.
+          </p>
+
+          <div class="hero__actions">
+
+            <a href="register.html" class="btn btn--primary">
+              Join the Club →
+            </a>
+
+            <a href="#shelf" class="btn btn--ghost">
+              Browse Books
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- =========================
+             HERO SIDEBAR
+             ========================= -->
+
+        <div class="hero__sidebar">
+
+          <!-- Reading Challenge -->
+
+          <aside class="hero__challenge">
+
+            <p class="hero__challenge-badge">
+              MEMBERS ONLY
+            </p>
+
+            <div class="hero__challenge-heading">
+
+              <span class="hero__challenge-icon" aria-hidden="true">
+                📚
+              </span>
+
+              <h2 class="hero__challenge-title">
+                The Reading Challenge
+              </h2>
+
+            </div>
+
+            <p class="hero__challenge-description">
+              Prove your devotion. Complete our secret membership
+              test to unlock the inner shelf.
+            </p>
+
+            <ul class="hero__challenge-list">
+
+              <li>
+                12 books per year minimum
+              </li>
+
+              <li>
+                At least 3 genres explored
+              </li>
+
+              <li>
+                One abandoned book confessed
+              </li>
+
+              <li class="hero__challenge-list--locked">
+                ??? classified challenge ???
+              </li>
+
+            </ul>
+
+            <a href="register.html" class="btn btn--secondary">
+              Take the membership test →
+            </a>
+
+          </aside>
+
+
+          <!-- Statistics -->
+
+          <div class="stats">
+
+            <article class="stat">
+
+              <strong class="stat__value" id="stat-books">
+                0
+              </strong>
+
+              <span class="stat__label">
+                Books in the shelf
+              </span>
+
+            </article>
+
+
+            <article class="stat">
+
+              <strong class="stat__value" id="stat-members">0</strong>
+
+              <span class="stat__label">
+                Active members
+              </span>
+
+            </article>
+
+
+            <article class="stat">
+
+              <strong class="stat__value">
+                ∞
+              </strong>
+
+              <span class="stat__label">
+                Re-reads
+              </span>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         BOOK SHELF
+         ========================= -->
+
+    <section class="shelf" id="shelf">
+
+      <div class="container">
+
+        <!-- Shelf header -->
+
+        <div class="shelf__header">
+
+          <div class="shelf__heading">
+
+            <h2 class="shelf__title">
+              The Shelf
+            </h2>
+
+            <p class="shelf__count" id="shelf-count">
+              0 books found
+            </p>
+
+          </div>
+
+
+          <!-- Search -->
+
+          <div class="form-group shelf__search">
+
+            <label class="form-label" for="book-search">
+              Search books
+            </label>
+
+            <input class="form-input" type="search" id="book-search" placeholder="Search by title, author, genre...">
+
+          </div>
+
+        </div>
+
+
+        <!-- Genre filters -->
+
+        <div class="tag-list shelf__filters" id="genre-filters">
+          <!-- Genre filters will be generated by books.js -->
+        </div>
+
+
+        <!-- Books -->
+
+        <div class="book-grid" id="book-list">
+          <!-- Books will be rendered here by books.js -->
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer class="site-footer">
+
+    <div class="container site-footer__inner">
+
+      <div>
+
+        <p class="site-footer__brand">
+          JAL Book Club
+        </p>
+
+        <p class="site-footer__meta">
+          Built with books, code and questionable reading habits.
+        </p>
+
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+
+        <a href="index.html">
+          Books
+        </a>
+
+        <a href="login.html">
+          Sign In
+        </a>
+
+        <a href="register.html">
+          Join the Club
+        </a>
+
+      </nav>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+       ========================= -->
+
+  <script src="js/functions.js"></script>
+  <script src="js/books.js"></script>
+  <script src="js/auth-ui.js"></script>
+
+</body>
+
+</html>

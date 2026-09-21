@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Book | JAL Book Club</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="container create-book-page">
+        <section class="create-book">
+            <div class="create-book__intro">
+                <p class="create-book__eyebrow">The Inner Shelf</p>
+
+                <h1>Add a Book</h1>
+
+                <p>
+                    Add a new title to the JAL Book Club shelf.
+                </p>
+            </div>
+
+            <form id="create-book-form" class="form create-book__form">
+
+                <div class="form-group">
+                    <label class="form-label" for="book-title">
+                        Title
+                    </label>
+
+                    <input id="book-title" class="form-input" name="title" type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="book-author">
+                        Author
+                    </label>
+
+                    <input id="book-author" class="form-input" name="author" type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="book-year">
+                        Published year
+                    </label>
+
+                    <input id="book-year" class="form-input" name="published_year" type="number" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="book-genres">
+                        Genres
+                    </label>
+
+                    <input id="book-genres" class="form-input" name="genres" type="text"
+                        placeholder="Fantasy, Adventure, Drama" required>
+
+                    <p class="form-help">
+                        Separate multiple genres with commas.
+                    </p>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="book-image">
+                        Image path
+                    </label>
+
+                    <input id="book-image" class="form-input" name="image" type="text"
+                        placeholder="/images/book-cover.png" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="book-description">
+                        Description
+                    </label>
+
+                    <textarea id="book-description" class="form-textarea" name="description" required></textarea>
+                </div>
+
+                <p id="create-book-message" class="form-help" aria-live="polite"></p>
+
+                <div class="create-book__actions">
+                    <a href="books.html" class="btn btn--ghost">
+                        ← Cancel
+                    </a>
+
+                    <button class="btn btn--primary" type="submit">
+                        Add Book
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/functions.js"></script>
+    <script src="js/create-book.js"></script>
+</body>
+
+</html>

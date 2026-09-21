@@ -1,0 +1,17 @@
+body {
+	font-family: var(--font-body);
+	background: var(--color-bg);
+	color: var(--color-text);
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--font-display);
+}
+
+.meta,
+.badge,
+.stat-label {
+	font-family: var(--font-mono);
+}

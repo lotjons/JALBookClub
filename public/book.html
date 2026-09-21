@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book | JAL Book Club</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container nav">
+            <a class="nav__brand" href="index.html">
+                JAL Book Club
+            </a>
+
+            <nav class="nav__links" aria-label="Main navigation">
+                <a class="nav__link" href="index.html">Books</a>
+                <a class="nav__link" href="login.html">Sign In</a>
+            </nav>
+
+            <div class="nav__actions">
+                <a class="btn btn--primary" href="register.html">
+                    Join the Club
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container book-page">
+        <a class="book-page__back" href="index.html">
+            ← Back to the shelf
+        </a>
+
+        <p id="book-message" class="book-page__message" aria-live="polite"></p>
+
+        <section class="book-detail">
+            <div class="book-detail__cover">
+                <img id="book-image" class="book-detail__image" src="/assets/images/book-placeholder.jpg"
+                    alt="Book cover">
+            </div>
+
+            <div class="book-detail__content">
+                <p id="book-year" class="book-detail__year">
+                    2026
+                </p>
+
+                <h1 id="book-title" class="book-detail__title">
+                    Book Title
+                </h1>
+
+                <p id="book-author" class="book-detail__author">
+                    Author Name
+                </p>
+
+                <div id="book-genres" class="tag-list">
+                    <span class="tag">Fantasy</span>
+                    <span class="tag">Adventure</span>
+                </div>
+
+                <div class="book-rating">
+                    <span id="average-rating" class="book-rating__value">0.0</span>
+                    <span class="book-rating__star" aria-hidden="true">★</span>
+                    <span id="rating-count" class="book-rating__count">0 reviews</span>
+                </div>
+
+                <p id="book-description" class="book-detail__description">
+                    Book description will be displayed here.
+                </p>
+            </div>
+        </section>
+
+        <div class="book-community">
+            <section class="book-reviews" aria-labelledby="reviews-heading">
+                <div class="book-reviews__header">
+                    <div>
+                        <p class="book-reviews__eyebrow">Readers' notes</p>
+
+                        <h2 id="reviews-heading">
+                            Reviews
+                        </h2>
+                    </div>
+
+                    <p id="review-count" class="book-reviews__count">
+                        0 reviews
+                    </p>
+                </div>
+
+                <div id="reviews-list" class="review-list">
+                    <article class="review-card">
+                        <div class="review-card__header">
+                            <p class="review-card__name">Reader name</p>
+                            <span class="review-card__rating">★★★★★</span>
+                        </div>
+
+                        <p class="review-card__content">
+                            Review content will be displayed here.
+                        </p>
+
+                        <time class="review-card__date" datetime="2026-09-14">
+                            14 Sep 2026
+                        </time>
+                    </article>
+                </div>
+
+                <button id="show-more-reviews" class="btn btn--secondary" type="button">
+                    Show more reviews
+                </button>
+            </section>
+
+            <section class="book-review-form" aria-labelledby="review-form-heading">
+                <div class="book-review-form__intro">
+                    <p class="book-review-form__eyebrow">Your turn</p>
+
+                    <h2 id="review-form-heading">
+                        Leave a Review
+                    </h2>
+
+                    <p>
+                        Finished the book? Tell the club what you thought.
+                    </p>
+                </div>
+
+                <form id="review-form" class="form">
+                    <div class="form-group">
+                        <label class="form-label" for="review-name">
+                            Name
+                        </label>
+
+                        <input id="review-name" class="form-input" name="name" type="text" placeholder="Your name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="review-rating">
+                            Rating
+                        </label>
+
+                        <select id="review-rating" class="form-select" name="rating" required>
+                            <option value="">Choose rating</option>
+                            <option value="5">5 — Loved it</option>
+                            <option value="4">4 — Really good</option>
+                            <option value="3">3 — Good</option>
+                            <option value="2">2 — Not for me</option>
+                            <option value="1">1 — Didn't like it</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="review-content">
+                            Review
+                        </label>
+
+                        <textarea id="review-content" class="form-textarea" name="content"
+                            placeholder="What did you think?" required></textarea>
+                    </div>
+
+                    <p id="review-message" class="form-help"></p>
+
+                    <button class="btn btn--primary" type="submit">
+                        Post Review
+                    </button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container site-footer__inner">
+            <div>
+                <p class="site-footer__brand">JAL Book Club</p>
+
+                <p class="site-footer__meta">
+                    Built with books, code and questionable reading habits.
+                </p>
+            </div>
+
+            <nav class="site-footer__nav" aria-label="Footer navigation">
+                <a href="index.html">Books</a>
+                <a href="login.html">Sign In</a>
+                <a href="register.html">Join the Club</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="/js/functions.js"></script>
+    <script src="/js/book.js"></script>
+</body>
+
+</html>

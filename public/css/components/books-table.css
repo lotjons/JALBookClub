@@ -1,0 +1,123 @@
+/* =========================
+   BOOKS TABLE
+   ========================= */
+
+.books-table-wrapper {
+	width: 100%;
+	overflow-x: auto;
+
+	background-color: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-lg);
+}
+
+.books-table {
+	width: 100%;
+	min-width: 850px;
+	border-collapse: collapse;
+}
+
+.books-table th,
+.books-table td {
+	padding: 1rem 1.25rem;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.books-table th {
+	font-family: var(--font-mono);
+	font-size: 0.75rem;
+	font-weight: 500;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+
+	color: var(--color-text-muted);
+	background-color: var(--color-surface-alt);
+	border-bottom: 1px solid var(--color-border);
+}
+
+.books-table td {
+	color: var(--color-text);
+	border-bottom: 1px solid var(--color-border);
+}
+
+.books-table tbody tr:last-child td {
+	border-bottom: 0;
+}
+
+.books-table tbody tr {
+	transition: background-color 0.2s ease;
+}
+
+.books-table tbody tr:hover {
+	background-color: var(--color-surface-alt);
+}
+
+/* Title */
+
+.books-table td:first-child {
+	font-family: var(--font-display);
+	font-size: 1.05rem;
+	font-weight: 600;
+}
+
+/* Published year */
+
+.books-table th:nth-child(4),
+.books-table td:nth-child(4) {
+	white-space: nowrap;
+}
+
+/* Rating */
+
+.books-table th:nth-child(5),
+.books-table td:nth-child(5) {
+	white-space: nowrap;
+}
+
+/* Action */
+
+.books-table th:last-child,
+.books-table td:last-child {
+	width: 1%;
+	white-space: nowrap;
+}
+
+.books-table td:last-child .btn {
+	padding: 0.55rem 0.9rem;
+}
+
+/* =========================
+   TABLE CONTROLS
+   ========================= */
+
+.books-table__controls {
+	display: flex;
+	justify-content: flex-end;
+
+	margin-bottom: var(--space-md);
+}
+
+.books-table__controls .form-group {
+	width: min(100%, 240px);
+	margin: 0;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+	.books-table__controls {
+		justify-content: stretch;
+	}
+
+	.books-table__controls .form-group {
+		width: 100%;
+	}
+
+	.books-table th,
+	.books-table td {
+		padding: 0.85rem 1rem;
+	}
+}
